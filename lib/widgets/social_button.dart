@@ -10,20 +10,20 @@ class SocialButton extends StatelessWidget {
       {super.key,
       required this.iconPath,
       required this.label,
-      required this.horizontalPadding});
+      this.horizontalPadding = 75});
 
   @override
   Widget build(BuildContext context) {
     return TextButton.icon(
         onPressed: () {},
-        icon: SvgPicture.asset(iconPath, width: 25, color: Pallete.whiteColor),
+        icon: SvgPicture.asset(iconPath, width: 30, color: Pallete.whiteColor),
         label: Text(label,
             style: const TextStyle(color: Pallete.whiteColor, fontSize: 17)),
         style: TextButton.styleFrom(
             padding: EdgeInsets.symmetric(
-                vertical: 30, horizontal: horizontalPadding),
+                vertical: 15, horizontal: horizontalPadding),
             shape: RoundedRectangleBorder(
-                side: const BorderSide(color: Pallete.borderColor, width: 3),
+                side: const BorderSide(color: Pallete.borderColor, width: 1),
                 borderRadius: BorderRadius.circular(10))));
   }
 }
