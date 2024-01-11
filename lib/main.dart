@@ -20,10 +20,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (_) => CounterCubit()),
-        BlocProvider(create: (_) => CounterBloc()),
+        // BlocProvider(create: (_) => CounterCubit()),
+        // BlocProvider(create: (_) => CounterBloc()),
+        BlocProvider(create: (_) => AuthBloc()),
         BlocProvider(create: (_) => TodoCubit()),
-        BlocProvider(create: (_) => AuthBloc())
       ],
       child: MaterialApp(
         title: 'Flutter Demo',

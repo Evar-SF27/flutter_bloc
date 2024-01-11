@@ -3,7 +3,9 @@ import 'package:state_manager/pages/pallette.dart';
 
 class GradientButton extends StatelessWidget {
   final VoidCallback onPressed;
-  const GradientButton({super.key, required this.onPressed});
+  final String label;
+  const GradientButton(
+      {super.key, required this.onPressed, this.label = 'Log In'});
 
   @override
   Widget build(BuildContext context) {
@@ -16,12 +18,13 @@ class GradientButton extends StatelessWidget {
             ], begin: Alignment.bottomLeft, end: Alignment.topRight),
             borderRadius: BorderRadius.circular(7)),
         child: ElevatedButton(
-            onPressed: () {},
+            onPressed: onPressed,
             style: ElevatedButton.styleFrom(
                 fixedSize: const Size(350, 55),
                 backgroundColor: Colors.transparent,
                 shadowColor: Colors.transparent),
-            child: const Text('Sign In',
-                style: TextStyle(fontWeight: FontWeight.w600, fontSize: 17))));
+            child: Text(label,
+                style: const TextStyle(
+                    fontWeight: FontWeight.w600, fontSize: 17))));
   }
 }
