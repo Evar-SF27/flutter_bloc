@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:state_manager/pages/pallette.dart';
 
 class GradientButton extends StatelessWidget {
-  const GradientButton({super.key});
+  final VoidCallback onPressed;
+  const GradientButton({super.key, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class GradientButton extends StatelessWidget {
         child: ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
-                fixedSize: const Size(395, 55),
+                fixedSize: const Size(350, 55),
                 backgroundColor: Colors.transparent,
                 shadowColor: Colors.transparent),
             child: const Text('Sign In',

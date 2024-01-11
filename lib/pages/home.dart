@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:state_manager/bloc/counter_bloc.dart';
-import 'package:state_manager/cubit/counter_cubit.dart';
+// import 'package:state_manager/cubit/counter_cubit.dart';
 import 'package:state_manager/widgets/inc_btn.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -16,8 +16,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    final counterCubit = BlocProvider.of<CounterCubit>(context);
-    final counterBloc = BlocProvider.of<CounterBloc>(context);
+    // final counterCubit = BlocProvider.of<CounterCubit>(context);
+    // final counterBloc = BlocProvider.of<CounterBloc>(context);
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
