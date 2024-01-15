@@ -13,6 +13,7 @@ class WeatherRepository {
       final weatherData = await weatherDataProvider.getCurrentWeather(cityName);
 
       final data = jsonDecode(weatherData);
+      print(WeatherModel.fromMap(data));
 
       if (data['cod'] != '200') {
         throw 'An unexpected error occured';
